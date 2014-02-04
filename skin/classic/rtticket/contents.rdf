@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!-- Copyright 2006, 2014 The University of British Columbia and Derek Poon
+     Released under the Mozilla Public License, v2.0. -->
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:chrome="http://www.mozilla.org/rdf/chrome#">
+
+  <!-- List all the skins being supplied by this theme -->
+  <Seq about="urn:mozilla:skin:root">
+    <li resource="urn:mozilla:skin:classic/1.0"/>
+  </Seq>
+  
+  <Description about="urn:mozilla:skin:classic/1.0" 
+               chrome:displayName="Classic"
+               chrome:name="classic"
+               chrome:image="icon.png">
+   <chrome:packages>
+      <Seq about="urn:mozilla:skin:classic/1.0:packages">
+        <li resource="urn:mozilla:skin:classic/1.0:rtticket"/>
+      </Seq>
+    </chrome:packages>
+  </Description>
+
+  <!-- Version Information.  State that we work only with major version 1 of this package. -->
+  <!-- Description chrome:skinVersion="1.5" about="urn:mozilla:skin:classic:rtticket"/ -->
+  <!-- <Description about="urn:mozilla:skin:classic:rtticket"/> -->
+
+  <Seq about="urn:mozilla:stylesheets">
+    <li resource="chrome://messenger/content/messenger.xul"/>
+    <li resource="chrome://global/content/customizeToolbar.xul"/>
+  </Seq>
+
+  <Seq about="chrome://messenger/content/messenger.xul">
+    <li>chrome://rtticket/skin/rtticket.css</li>
+  </Seq>
+
+  <Seq about="chrome://global/content/customizeToolbar.xul">
+    <li>chrome://rtticket/skin/rtticket.css</li>
+  </Seq>
+</RDF>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!-- Copyright 2006, 2014 The University of British Columbia and Derek Poon
+     Released under the Mozilla Public License, v2.0. -->
+
+<?xml-stylesheet type="text/css" href="chrome://global/skin/"?>
+<?xml-stylesheet type="text/css" href="chrome://rtticket/skin/about.css"?>
+
+<!DOCTYPE dialog SYSTEM "chrome://rtticket/locale/about.dtd">
+
+<dialog xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        id="about-dialog"
+        title="&about.title;"
+        buttons="accept"
+        ondialogaccept="return true;">
+
+  <vbox flex="1">
+    <html:iframe style="border: 0;" flex="1"
+                 src="chrome://rtticket/locale/about.xhtml"/>
+  </vbox>
+
+  <separator class="groove" id="groove"/>
+
+</dialog>

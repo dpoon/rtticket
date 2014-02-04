@@ -1,0 +1,41 @@
+<!-- Copyright 2006, 2014 The University of British Columbia and Derek Poon
+     Released under the Mozilla Public License, v2.0. -->
+<!ENTITY rtticket.associateCommand.label "Associate">
+<!ENTITY rtticket.associateCommand.tooltip "Associate selected message with a Request Tracker ticket">
+<!ENTITY rtticket.associateCommand.accel "A">
+<!ENTITY rtticket.associateCommand.key "3">
+
+<!ENTITY rtticket.associate.title "Associate Message(s) With Ticket">
+<!ENTITY rtticket.associate.ticketnumber "Ticket Number:">
+<!ENTITY rtticket.associate.okbutton "Associate">
+<!ENTITY rtticket.associate.cancelbutton "Cancel">
+
+<!ENTITY rtticket.compose.ticketlabel "RT-Ticket:">
+<!ENTITY rtticket.compose.ticketlabel.accesskey "T">
+
+<!ENTITY rtticket.msghdr.ticketlabel "RT-Ticket: ">
+
+<!ENTITY rtticket.options.title "Request Tracker Settings">
+<!ENTITY rtticket.prefpane.label "RT Ticket">
+<!ENTITY rtticket.pref.title "Request Tracker Ticket Manager">
+<!ENTITY rtticket.pref.account.label "Request Tracker Account">
+<!ENTITY rtticket.pref.user.label "Request Tracker User:">
+<!ENTITY rtticket.pref.user.accesskey "U">
+<!ENTITY rtticket.pref.domain.label "Request Tracker Domain:">
+<!ENTITY rtticket.pref.domain.accesskey "D">
+<!ENTITY rtticket.pref.web.label "Web Interface URL:">
+<!ENTITY rtticket.pref.web.accesskey "W">
+<!ENTITY rtticket.pref.compose.label "Composing Messages">
+<!ENTITY rtticket.pref.compose.bcc.label "BCC address:">
+<!ENTITY rtticket.pref.compose.bcc.accesskey "B">
+<!ENTITY rtticket.pref.compose.replyto.label "Reply-To address:">
+<!ENTITY rtticket.pref.compose.replyto.accesskey "R">
+<!ENTITY rtticket.pref.compose.errorsto.label "Errors-To address:">
+<!ENTITY rtticket.pref.compose.errorsto.accesskey "E">
+<!ENTITY rtticket.pref.associate.label "Associating Messages With Tickets">
+<!ENTITY rtticket.pref.associate.resendto.label "Re-send to address:">
+<!ENTITY rtticket.pref.associate.resendto.accesskey "A">
+<!ENTITY rtticket.pref.associate.overwriteoriginal.label "Overwrite original message with re-sent message">
+<!ENTITY rtticket.pref.associate.overwriteoriginal.accesskey "O">
+<!ENTITY rtticket.pref.associate.savetosentmail.label "Save to Sent Mail">
+<!ENTITY rtticket.pref.associate.savetosentmail.accesskey "S">

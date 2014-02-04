@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!-- Copyright 2006, 2014 The University of British Columbia and Derek Poon
+     Released under the Mozilla Public License, v2.0. -->
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:chrome="http://www.mozilla.org/rdf/chrome#">
+  <Seq about="urn:mozilla:package:root">
+    <li resource="urn:mozilla:package:rtticket"/>
+  </Seq>
+
+  <Description about="urn:mozilla:package:rtticket"
+        chrome:name="rtticket"
+        chrome:extension="true"/>
+
+  <Seq about="urn:mozilla:overlays">
+    <li resource="chrome://messenger/content/mailWindowOverlay.xul"/>
+    <li resource="chrome://messenger/content/msgHdrViewOverlay.xul"/>
+    <li resource="chrome://global/content/customizeToolbar.xul"/>
+    <li resource="chrome://messenger/content/messengercompose/messengercompose.xul"/>
+    <li resource="chrome://communicator/content/pref/pref.xul"/>
+  </Seq>
+
+  <Seq about="chrome://messenger/content/mailWindowOverlay.xul">
+    <li>chrome://rtticket/content/messenger-overlay.xul</li>
+  </Seq>
+
+  <Seq about="chrome://messenger/content/msgHdrViewOverlay.xul">
+    <li>chrome://rtticket/content/messenger-msghdrview-overlay.xul</li>
+  </Seq>
+
+  <Seq about="chrome://global/content/customizeToolbar.xul">
+    <li>chrome://rtticket/content/messenger-customtoolbar-overlay.xul</li>
+  </Seq>
+
+  <Seq about="chrome://messenger/content/messengercompose/messengercompose.xul">
+    <li>chrome://rtticket/content/messenger-compose-overlay.xul</li>
+  </Seq>
+
+  <!-- Thunderbird 1.0 only -->
+  <Seq about="chrome://communicator/content/pref/pref.xul">
+    <li>chrome://rtticket/content/communicator-pref-overlay.xul</li>
+  </Seq>
+</RDF>

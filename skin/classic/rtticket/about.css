@@ -1,0 +1,48 @@
+/**
+ * Copyright 2006, 2014 The University of British Columbia and Derek Poon
+ * Released under the Mozilla Public License, v2.0.
+ */
+
+#about-dialog {
+	width: 350px;
+	height: 220px;
+	border: 0;
+	padding: 0;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	color: black;
+	font-family: Helvetica, sans-serif;
+	font-size: small;
+}
+
+body {
+	padding: 1em;
+}
+
+h1 {
+	font-size: 110%;
+}
+
+a:link {
+	color: blue;
+}
+
+a.stealth {
+	color: black;
+}
+
+img.icon {
+	float: left;
+}
+
+#project, #version, #copyright {
+	margin: 0 0 0 40px;
+}
+
+#version, #copyright {
+	font-size: smaller;
+}

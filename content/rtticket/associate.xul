@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!-- Copyright 2006, 2014 The University of British Columbia and Derek Poon
+     Released under the Mozilla Public License, v2.0. -->
+
+<?xml-stylesheet type="text/css" href="chrome://global/skin/"?>
+<?xml-stylesheet type="text/css" href="chrome://messenger/skin/dialogs.css"?>
+
+<?xml-stylesheet type="text/css" href="chrome://communicator/skin/"?>
+
+<?xml-stylesheet type="text/css" href="chrome://rtticket/skin/"?>
+
+<!DOCTYPE window [
+  <!ENTITY % rtticketDTD SYSTEM "chrome://rtticket/locale/rtticket.dtd">
+  %rtticketDTD;
+]>
+
+<window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        id="rtticket-associate-window"
+        title="&rtticket.associate.title;"
+        onload="RTTicket.associate.setup();"
+        onunload="RTTicket.associate.teardown();"
+        onclose="return RTTicket.associate.close()"
+        screenX="100" screenY="100"
+        windowtype="mail:rtticketAssociateWindow"
+        persist="screenX screenY width height sizemode">
+
+  <script type="application/x-javascript" src="chrome://global/content/globalOverlay.js"/>
+  <script type="application/x-javascript" src="chrome://communicator/content/utilityOverlay.js"/>
+
+  <script type="application/x-javascript" src="prefsmgr.js"/>
+  <script type="application/x-javascript" src="associate.js"/>
+
+  <keyset id="mailKeys">
+    <key keycode="VK_ESCAPE" command="cmd_rtticket_associate_close"/>
+    <key id="key_associate"
+         keycode="VK_RETURN"
+         observes="cmd_rtticket_associate_associate"/>
+    <key id="key_associate2"
+         keycode="VK_ENTER"
+         observes="cmd_rtticket_associate_associate"/>
+  </keyset>
+
+  <commandset id="rtticket_associate"
+              commandupdater="true"
+              events="*"
+              oncommandupdate="goUpdateCommand('cmd_rtticket_associate_associate');">
+    <command id="cmd_rtticket_associate_associate"
+             oncommand="goDoCommand('cmd_rtticket_associate_associate')"/>
+    <command id="cmd_rtticket_associate_close"
+             oncommand="goDoCommand('cmd_rtticket_associate_close')"/>
+  </commandset>
+
+  <vbox>
+    <hbox align="center">
+      <label value="&rtticket.associate.ticketnumber;"
+             control="ticketnumber-input"/>
+      <textbox id="ticketnumber-input"
+               cols="8" flex="1"/>
+      <button label="&rtticket.associate.okbutton;" icon="accept" default="true"
+              observes="cmd_rtticket_associate_associate"/>
+      <button label="&rtticket.associate.cancelbutton;" icon="cancel"
+              command="cmd_rtticket_associate_close"/>
+    </hbox>
+  </vbox>
+  <separator class="groove" id="groove"/>
+  <vbox flex="1"/>
+
+</window>

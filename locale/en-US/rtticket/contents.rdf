@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!-- Copyright 2006, 2014 The University of British Columbia and Derek Poon
+     Released under the Mozilla Public License, v2.0. -->
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:chrome="http://www.mozilla.org/rdf/chrome#">
+
+  <Seq about="urn:mozilla:locale:root">
+    <li resource="urn:mozilla:locale:en-US"/>
+  </Seq>
+
+  <Description about="urn:mozilla:locale:en-US">
+    <chrome:packages>
+      <Seq about="urn:mozilla:locale:en-US:packages">
+        <li resource="urn:mozilla:locale:en-US:rtticket"/>
+      </Seq>
+    </chrome:packages>
+  </Description>
+
+</RDF>

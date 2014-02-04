@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!-- Copyright 2006, 2014 The University of British Columbia and Derek Poon
+     Released under the Mozilla Public License, v2.0. -->
+
+<?xml-stylesheet type="text/css" href="chrome://global/skin/"?>
+<?xml-stylesheet type="text/css" href="chrome://communicator/skin/"?>
+<?xml-stylesheet type="text/css" href="chrome://rtticket/skin/"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://rtticket/locale/rtticket.dtd">
+
+<overlay id="messenger-compose-rtticket-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/x-javascript" src="prefsmgr.js"/>
+  <script type="application/x-javascript" src="logger.js"/>
+  <script type="application/x-javascript" src="rtticket.js"/>
+  <script type="application/x-javascript" src="compose.js"/>
+  <script type="application/x-javascript">
+     window.addEventListener('load', RTTicket.compose.setup, false);
+     window.addEventListener('unload', RTTicket.compose.teardown, false);
+  </script>
+
+  <!--
+    Insert a Ticket number field before the Subject field.  (Since the
+    hbox containing the Subject field has no id attribute, we specify
+    that it goes after addressingWidget instead.)
+
+    It would be tricky to put any field after the Subject field since
+    the Subject field is hard-wired to transfer focus to the content
+    editor on TAB or ENTER.  (See the function subjectKeyPress(...) in
+    chrome://messenger/content/messengercompose/MsgComposeCommands.js)
+  -->
+  <vbox id="addresses-box">
+    <hbox align="center" insertafter="addressingWidget">
+      <label id="compose-ticketnumber-label"
+             control="compose-ticketnumber-input"
+             value="&rtticket.compose.ticketlabel;"
+             accesskey="&rtticket.compose.ticketlabel.accesskey;"/>
+      <textbox id="compose-ticketnumber-input"
+               class="toolbar" flex="1"
+               oninput="gContentChanged=true;"
+               onkeypress="return RTTicket.compose.ticketInputHandler(event);"
+               onkeyup="return RTTicket.compose.ticketInputHandler(event);"
+               onmouseup="return RTTicket.compose.ticketInputHandler(event);"
+               disableonsend="true"/>
+    </hbox>
+  </vbox>
+
+</overlay>

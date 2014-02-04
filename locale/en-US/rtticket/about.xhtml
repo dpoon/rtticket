@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!-- Copyright 2006, 2014 The University of British Columbia and Derek Poon
+     Released under the Mozilla Public License, v2.0. -->
+
+<?xml-stylesheet type="text/css" href="chrome://rtticket/skin/about.css"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+                      "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd" [
+  <!ENTITY % releaseDTD SYSTEM "chrome://rtticket/content/release.dtd">
+  %releaseDTD;
+  <!ENTITY % aboutDTD SYSTEM "chrome://rtticket/locale/about.dtd">
+  %aboutDTD;
+  <!ENTITY copy "&#169;">
+]>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>&about.title;</title>
+  </head>
+  <body>
+    <img src="chrome://rtticket/skin/icon.png" alt="&about.icon.alt;"
+         class="icon" width="32" height="32"/>
+    <h1 id="project">
+      <a class="stealth" href="&release.homepage;">&about.heading;</a>
+    </h1>
+    <p id="version">Version &release.version;</p>
+    <p id="copyright">
+      &copy; 2006
+      <a class="stealth" href="http://www.ubc.ca/">University of British Columbia</a>
+      and
+      <a class="stealth" href="http://www.ece.ubc.ca/~derekp/">Derek Poon</a>
+    </p>
+    <p>
+      This extension lets you manage e-mail messages relating to
+      <a href="http://www.bestpractical.com/rt/">Request Tracker</a>
+      tickets through Thunderbird.
+    </p>
+  </body>
+</html>

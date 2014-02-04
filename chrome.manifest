@@ -1,0 +1,37 @@
+######################################################################
+# Extension chrome manifest for Thunderbird 1.5+.
+# Copyright 2006, 2014 The University of British Columbia and Derek Poon
+# Released under the Mozilla Public License, v2.0.
+#
+# For rapid development, unpack the JAR file, uncomment the lines
+# below with the file: URLs and comment out the lines with the JAR
+# URLs.
+#
+# Thunderbird 1.0 consults the **/contents.rdf files instead of this
+# file.  For rapid development in Thunderbird 1.0, unpack the JAR and
+# edit the chrome registry ($PROFILE_DIR/chrome/chrome.rdf) manually
+# with this substitution:
+#       s#"jar:\(file://.*/\)rtticket.jar!\(/.*\)"#"\1\2"#
+# To undo that hack, the inverse transformation would be:
+#       s#"\(file://.*/\)\(/.*\)"#"jar:\1rtticket.jar!\2"#
+######################################################################
+
+content rtticket    jar:chrome/rtticket.jar!/content/rtticket/
+#content rtticket   file:chrome/content/rtticket/
+
+overlay chrome://messenger/content/mailWindowOverlay.xul                    chrome://rtticket/content/messenger-overlay.xul
+overlay chrome://messenger/content/msgHdrViewOverlay.xul                    chrome://rtticket/content/messenger-msghdrview-overlay.xul
+overlay chrome://global/content/customizeToolbar.xul                        chrome://rtticket/content/messenger-customtoolbar-overlay.xul
+overlay chrome://messenger/content/messengercompose/messengercompose.xul    chrome://rtticket/content/messenger-compose-overlay.xul
+
+# Thunderbird 1.5+ only
+overlay chrome://messenger/content/preferences/preferences.xul          chrome://rtticket/content/messenger-preferences-overlay.xul
+
+locale  rtticket    en-US   jar:chrome/rtticket.jar!/locale/en-US/rtticket/
+#locale rtticket    en-US   file:chrome/locale/en-US/rtticket/
+
+skin    rtticket    classic/1.0 jar:chrome/rtticket.jar!/skin/classic/rtticket/
+#skin   rtticket    classic/1.0 file:chrome/skin/classic/rtticket/
+
+style   chrome://messenger/content/messenger.xul        chrome://rtticket/skin/rtticket.css
+style   chrome://global/content/customizeToolbar.xul    chrome://rtticket/skin/rtticket.css

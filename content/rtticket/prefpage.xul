@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!-- Copyright 2006, 2014 The University of British Columbia and Derek Poon
+     Released under the Mozilla Public License, v2.0. -->
+
+<!-- For Thunderbird 1.0 -->
+<?xml-stylesheet type="text/css" href="chrome://communicator/skin/pref/pref.css"?>
+<?xml-stylesheet type="text/css" href="chrome://rtticket/skin/"?>
+
+<?xul-overlay href="chrome://rtticket/content/settings-overlay.xul"?>
+
+<!DOCTYPE page SYSTEM "chrome://rtticket/locale/rtticket.dtd">
+
+<page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+      id="rtticket-prefpage"
+      onload="parent.initPanel('chrome://rtticket/content/prefpage.xul');"
+      headertitle="&rtticket.pref.title;">
+  
+  <tabbox id="rtticket-settings" flex="1"/>
+</page>

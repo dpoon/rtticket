@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- Copyright 2006, 2014 The University of British Columbia and Derek Poon
+     Released under the Mozilla Public License, v2.0. -->
+
+<?xml-stylesheet type="text/css" href="chrome://global/skin/global.css"?>
+<?xml-stylesheet type="text/css" href="chrome://communicator/skin/communicator.css"?>
+
+<?xml-stylesheet type="text/css" href="chrome://rtticket/skin/"?>
+
+<!-- No content to add; just attach our rtticket.css for the icon -->
+<overlay id="rtticket-customtoolbar-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"/>

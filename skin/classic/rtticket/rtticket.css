@@ -1,0 +1,54 @@
+/**
+ * Copyright 2006, 2014 The University of British Columbia and Derek Poon
+ * Released under the Mozilla Public License, v2.0.
+ */
+
+#msgcomposeWindow #addresses-box > hbox > label {
+	width: 4.25em;
+}
+
+#compose-ticketnumber-input {
+	margin-top: 0px;
+	margin-bottom: 4px;
+}
+
+#rtticket-associate-toolbarbutton {
+	list-style-image: url(chrome://rtticket/skin/associate.png);
+	/* -moz-image-region: rect(0px 23px 21px 0px); */
+	-moz-image-region: rect(0px 24px 24px 0px);
+}
+
+#rtticket-associate-toolbarbutton:hover {
+	-moz-image-region: rect(24px 24px 48px 0px);
+}
+
+#rtticket-associate-toolbarbutton[disabled="true"] {
+	-moz-image-region: rect(48px 24px 72px 0px);
+}
+
+toolbar[iconsize="small"] #rtticket-associate-toolbarbutton {
+	list-style-image: url(chrome://rtticket/skin/associate-small.png);
+	-moz-image-region: rect(0px 16px 16px 0px);
+}
+
+toolbar[iconsize="small"] #rtticket-associate-toolbarbutton:hover {
+	-moz-image-region: rect(16px 16px 32px 0px);
+}
+
+toolbar[iconsize="small"] #rtticket-associate-toolbarbutton[disabled="true"] {
+	-moz-image-region: rect(32px 16px 48px 0px);
+}
+
+/* Thunderbird 1.0 */
+#rtticket-pref-button.buttonBoxButton {
+	list-style-image: url(chrome://rtticket/skin/icon.png);
+}
+
+/* Thunderbird 1.5 */
+radio[pane=rtticket-pref-pane] {
+	list-style-image: url(chrome://rtticket/skin/icon.png);
+}
+
+#rtticket-settings > groupbox > grid label {
+	min-width: 14em;
+}

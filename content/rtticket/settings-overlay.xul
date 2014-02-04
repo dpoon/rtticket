@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<!-- Copyright 2006, 2014 The University of British Columbia and Derek Poon
+     Released under the Mozilla Public License, v2.0. -->
+
+<?xml-stylesheet type="text/css" href="chrome://global/skin/"?>
+<?xml-stylesheet type="text/css" href="chrome://communicator/skin/"?>
+<?xml-stylesheet type="text/css" href="chrome://rtticket/skin/"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://rtticket/locale/rtticket.dtd">
+
+<overlay id="rtticket-settings-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/x-javascript">
+  <![CDATA[
+    var _elementIDs = [
+        'rtticket-pref-user',
+        'rtticket-pref-domain',
+        'rtticket-pref-web',
+        'rtticket-pref-compose-bcc',
+        'rtticket-pref-compose-replyto',
+        'rtticket-pref-compose-errorsto',
+        'rtticket-pref-associate-resendto',
+        'rtticket-pref-associate-overwriteoriginal',
+        'rtticket-pref-associate-savetosentmail'
+    ];
+  ]]>
+  </script>
+
+  <tabbox id="rtticket-settings">
+    <tabs>
+      <tab label="&rtticket.pref.account.label;"/>
+      <tab label="&rtticket.pref.compose.label;"/>
+      <tab label="&rtticket.pref.associate.label;"/>
+    </tabs>
+
+    <!-- preftype and prefstring attributes are for Thunderbird 1.0 -->
+    <!-- preference attribute is for Thunderbird 1.5 -->
+
+    <tabpanels flex="1">
+
+      <tabpanel orient="vertical" id="rtticket-pref-account">
+        <grid id="rtticket-pref-account-grid" flex="1">
+          <columns>
+            <column id="labels"/>
+            <column id="inputs" flex="1"/>
+          </columns>
+    
+          <rows>
+            <row>
+              <label value="&rtticket.pref.user.label;"
+                     accesskey="&rtticket.pref.user.accesskey;"
+                     control="rtticket-pref-user"/>
+              <textbox id="rtticket-pref-user"
+                       flex="1" size="50"
+                       preftype="string"
+                       prefstring="extensions.rtticket.rtUser"
+                       preference="extensions.rtticket.rtUser"/>
+            </row>
+            <row>
+              <label value="&rtticket.pref.domain.label;"
+                     accesskey="&rtticket.pref.domain.accesskey;"
+                     control="rtticket-pref-domain"/>
+              <textbox id="rtticket-pref-domain"
+                       flex="1" size="50"
+                       preftype="string"
+                       prefstring="extensions.rtticket.rtDomain"
+                       preference="extensions.rtticket.rtDomain"/>
+            </row>
+            <row>
+              <label value="&rtticket.pref.web.label;"
+                     accesskey="&rtticket.pref.web.accesskey;"
+                     control="rtticket-pref-web"/>
+              <textbox id="rtticket-pref-web"
+                       flex="1" size="50"
+                       preftype="string"
+                       prefstring="extensions.rtticket.rtWeb"
+                       preference="extensions.rtticket.rtWeb"/>
+            </row>
+          </rows>
+        </grid>
+      </tabpanel>
+
+      <tabpanel orient="vertical" id="rtticket-pref-compose">
+        <caption label="&rtticket.pref.compose.label;"/>
+
+        <grid id="rtticket-pref-compose-grid" flex="1">
+          <columns>
+            <column id="labels"/>
+            <column id="inputs" flex="1"/>
+          </columns>
+
+          <rows>
+            <row>
+              <label value="&rtticket.pref.compose.bcc.label;"
+                     accesskey="&rtticket.pref.compose.bcc.accesskey;"
+                     control="rtticket-pref-compose-bcc"/>
+              <textbox id="rtticket-pref-compose-bcc"
+                       flex="1" size="50"
+                       preftype="string"
+                       prefstring="extensions.rtticket.compose.bcc"
+                       preference="extensions.rtticket.compose.bcc"/>
+            </row>
+            <row>
+              <label value="&rtticket.pref.compose.replyto.label;"
+                     accesskey="&rtticket.pref.compose.replyto.accesskey;"
+                     control="rtticket-pref-compose-replyto"/>
+              <textbox id="rtticket-pref-compose-replyto"
+                       flex="1" size="50"
+                       preftype="string"
+                       prefstring="extensions.rtticket.compose.replyTo"
+                       preference="extensions.rtticket.compose.replyTo"/>
+            </row>
+            <row>
+              <label value="&rtticket.pref.compose.errorsto.label;"
+                     accesskey="&rtticket.pref.compose.errorsto.accesskey;"
+                     control="rtticket-pref-compose-errorsto"/>
+              <textbox id="rtticket-pref-compose-errorsto"
+                       flex="1" size="50"
+                       preftype="string"
+                       prefstring="extensions.rtticket.compose.errorsTo"
+                       preference="extensions.rtticket.compose.errorsTo"/>
+            </row>
+          </rows>
+        </grid>
+      </tabpanel>
+
+      <tabpanel orient="vertical" id="rtticket-pref-associate">
+        <grid id="rtticket-pref-associate-grid" flex="1">
+          <columns>
+            <column id="labels"/>
+            <column id="inputs" flex="1"/>
+          </columns>
+    
+          <rows>
+            <row>
+              <label value="&rtticket.pref.associate.resendto.label;"
+                 accesskey="&rtticket.pref.associate.resendto.accesskey;"
+                 control="rtticket-pref-associate-resendto"/>
+              <textbox id="rtticket-pref-associate-resendto"
+                   flex="1" size="50"
+                   preftype="string"
+                   prefstring="extensions.rtticket.associate.resendTo"
+                   preference="extensions.rtticket.associate.resendTo"/>
+            </row>
+          </rows>
+        </grid>
+        <hbox align="start">
+          <checkbox id="rtticket-pref-associate-overwriteoriginal"
+                    prefstring="extensions.rtticket.associate.overwriteOriginal"
+                    preference="extensions.rtticket.associate.overwriteOriginal"
+                    label="&rtticket.pref.associate.overwriteoriginal.label;"
+                    accesskey="&rtticket.pref.associate.overwriteoriginal.accesskey;"/>
+        </hbox>
+        <hbox align="start">
+          <checkbox id="rtticket-pref-associate-savetosentmail"
+                    prefstring="extensions.rtticket.associate.saveToSentMail"
+                    preference="extensions.rtticket.associate.saveToSentMail"
+                    label="&rtticket.pref.associate.savetosentmail.label;"
+                    accesskey="&rtticket.pref.associate.savetosentmail.accesskey;"/>
+        </hbox>
+      </tabpanel>
+
+    </tabpanels>
+  </tabbox>
+
+</overlay>

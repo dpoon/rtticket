@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- Copyright 2006, 2014 The University of British Columbia and Derek Poon
+     Released under the Mozilla Public License, v2.0. -->
+
+<?xml-stylesheet type="text/css" href="widgets.css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://rtticket/locale/rtticket.dtd">
+
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+         id="messenger-msghdrview-rtticket-overlay">
+
+  <script type="application/x-javascript" src="msghdrview.js"/>
+
+  <vbox id="expandedHeaders">
+    <mail-ticketfield id="expandedrt-ticketBox"
+                      insertafter="expandedsubjectBox"
+                      label="&rtticket.msghdr.ticketlabel;"
+                      collapsed="true"/>
+  </vbox>
+</overlay>

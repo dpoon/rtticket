@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!-- Copyright 2006, 2014 The University of British Columbia and Derek Poon
+     Released under the Mozilla Public License, v2.0. -->
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>{7c09532c-d8a8-44ad-98c4-f6288b312275}</em:id>
+    <em:version>$(VERSION)</em:version>
+
+    <!-- Target Application this extension can install into, 
+         with minimum and maximum supported versions. --> 
+    <em:targetApplication>
+      <Description>
+        <!-- Thunderbird -->
+        <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
+        <em:minVersion>1.0</em:minVersion>
+        <em:maxVersion>2.0.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+
+    <!-- Front End MetaData -->
+    <em:name>$(NAME)</em:name>
+    <em:description>Manage Request Tracker Tickets</em:description>
+    <em:creator>University of British Columbia</em:creator>
+    <em:contributor>Derek Poon</em:contributor>
+    <em:homepageURL>$(HOMEPAGE)</em:homepageURL>
+    <em:updateURL>$(RELEASE_BASE_URL)/update.rdf?itemId=%ITEM_ID%&amp;itemVer=%ITEM_VERSION%&amp;appId=%APP_ID%&amp;appVer=%APP_VERSION%</em:updateURL>
+    <em:optionsURL>chrome://rtticket/content/options.xul</em:optionsURL>
+    <em:aboutURL>chrome://rtticket/content/about.xul</em:aboutURL>
+    <em:iconURL>chrome://rtticket/skin/icon.png</em:iconURL>
+
+    <!-- Packages, Skins and Locales that this extension registers -->
+    <em:file>
+      <Description about="urn:mozilla:extension:file:rtticket.jar">
+        <em:package>content/rtticket/</em:package>
+        <em:locale>locale/en-US/rtticket/</em:locale>
+        <em:skin>skin/classic/rtticket/</em:skin>
+      </Description>
+    </em:file>
+  </Description>
+
+</RDF>

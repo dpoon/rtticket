@@ -1,0 +1,28 @@
+<?xml version="1.0"?> 
+<!-- Copyright 2006, 2014 The University of British Columbia and Derek Poon
+     Released under the Mozilla Public License, v2.0. -->
+
+<?xml-stylesheet type="text/css" href="chrome://global/skin/"?> 
+<?xml-stylesheet type="text/css" href="chrome://communicator/skin/"?>
+<?xml-stylesheet type="text/css" href="chrome://messenger/skin/prefPanels.css"?>
+<?xml-stylesheet type="text/css" href="chrome://rtticket/skin/"?>
+
+<?xul-overlay href="chrome://rtticket/content/settings-overlay.xul"?>
+
+<!DOCTYPE dialog SYSTEM "chrome://rtticket/locale/rtticket.dtd"> 
+
+<dialog xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        id="rtticket-options-dialog"
+        buttons="accept, cancel"
+        onload="RTTicket.options.setup();" 
+        ondialogaccept="RTTicket.options.save(); RTTicket.options.teardown();"
+        ondialogcancel="RTTicket.options.teardown();"
+        title="&rtticket.options.title;">
+
+  <script type="application/x-javascript" src="chrome://rtticket/content/prefsmgr.js"/>
+  <script type="application/x-javascript" src="chrome://rtticket/content/logger.js"/>
+  <script type="application/x-javascript" src="chrome://rtticket/content/rtticket.js"/>
+  <script type="application/x-javascript" src="chrome://rtticket/content/options.js"/>
+ 
+  <tabbox id="rtticket-settings" flex="1"/>
+</dialog>

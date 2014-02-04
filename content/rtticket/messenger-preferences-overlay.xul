@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!-- Copyright 2006, 2014 The University of British Columbia and Derek Poon
+     Released under the Mozilla Public License, v2.0. -->
+
+<!-- For Thunderbird 1.5 -->
+<?xml-stylesheet type="text/css" href="chrome://communicator/skin/"?>
+<?xml-stylesheet type="text/css" href="chrome://communicator/skin/pref/pref.css"?>
+<?xml-stylesheet type="text/css" href="chrome://rtticket/skin/"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://rtticket/locale/rtticket.dtd">
+
+<overlay id="rtticket-pref-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <prefwindow id="MailPreferences">
+    <prefpane id="rtticket-pref-pane"
+              src="chrome://rtticket/content/settings-overlay.xul"
+              label="&rtticket.prefpane.label;">
+      <preferences>
+        <preference id="extensions.rtticket.rtUser"
+                    name="extensions.rtticket.rtUser"
+                    type="string"/>
+        <preference id="extensions.rtticket.rtDomain"
+                    name="extensions.rtticket.rtDomain"
+                    type="string"/>
+        <preference id="extensions.rtticket.rtWeb"
+                    name="extensions.rtticket.rtWeb"
+                    type="string"/>
+        <preference id="extensions.rtticket.compose.bcc"
+                    name="extensions.rtticket.compose.bcc"
+                    type="string"/>
+        <preference id="extensions.rtticket.compose.replyTo"
+                    name="extensions.rtticket.compose.replyTo"
+                    type="string"/>
+        <preference id="extensions.rtticket.compose.errorsTo"
+                    name="extensions.rtticket.compose.errorsTo"
+                    type="string"/>
+        <preference id="extensions.rtticket.associate.resendTo"
+                    name="extensions.rtticket.associate.resendTo"
+                    type="string"/>
+        <preference id="extensions.rtticket.associate.overwriteOriginal"
+                    name="extensions.rtticket.associate.overwriteOriginal"
+                    type="bool"/>
+        <preference id="extensions.rtticket.associate.saveToSentMail"
+                    name="extensions.rtticket.associate.saveToSentMail"
+                    type="bool"/>
+      </preferences>
+      <tabbox id="rtticket-settings"/>
+    </prefpane>
+  </prefwindow>
+
+</overlay>

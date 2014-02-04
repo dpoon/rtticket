@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!-- Copyright 2006, 2014 The University of British Columbia and Derek Poon
+     Released under the Mozilla Public License, v2.0. -->
+
+<?xml-stylesheet type="text/css" href="chrome://global/skin/"?>
+<?xml-stylesheet type="text/css" href="chrome://communicator/skin/"?>
+<?xml-stylesheet type="text/css" href="chrome://rtticket/skin/"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://rtticket/locale/rtticket.dtd">
+
+<overlay id="messenger-rtticket-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/x-javascript" src="prefsmgr.js"/>
+  <script type="application/x-javascript" src="logger.js"/>
+  <script type="application/x-javascript" src="rtticket.js"/>
+  <script type="application/x-javascript" src="delete.js"/>
+  <script type="application/x-javascript">
+     window.addEventListener('load', RTTicket.setup, false);
+     window.addEventListener('load', RTTicket.deleteJunk.setup, false);
+     window.addEventListener('unload', RTTicket.deleteJunk.teardown, false);
+     window.addEventListener('unload', RTTicket.teardown, false);
+  </script>
+
+  <keyset id="mailKeys">
+    <key id="key_rtticket_associate"
+         modifiers="accel" key="&rtticket.associateCommand.key;"
+         oncommand="goDoCommand('cmd_rtticket_associate');"/>
+  </keyset>
+
+  <commandset id="mailToolbarItems">
+    <command id="cmd_rtticket_associate"
+             oncommand="goDoCommand('cmd_rtticket_associate');"/>
+  </commandset>
+
+  <menupopup id="messageMenuPopup">
+    <menuitem id="menuitem_rtticket_associate"
+              label="&rtticket.associateCommand.label;"
+              accesskey="&rtticket.associateCommand.accel;"
+              key="key_rtticket_associate"
+              oncommand="goDoCommand('cmd_rtticket_associate');"
+              observes="cmd_rtticket_associate"
+              insertafter="forwardAsMenu"/>
+  </menupopup>
+
+  <!-- if (thunderbird) -->
+  <toolbarpalette id="MailToolbarPalette">
+    <toolbarbutton class="toolbarbutton-1"
+                   id="rtticket-associate-toolbarbutton"
+                   label="&rtticket.associateCommand.label;"
+                   tooltiptext="&rtticket.associateCommand.tooltip;"
+                   observes="cmd_rtticket_associate"/>
+  </toolbarpalette>
+
+  <!-- elseif (seamonkey) -->
+  <toolbox id="mailToolbarToolbox">
+    <toolbar id="msgToolbar">
+      <hbox id="toolbar_button_box">
+        <toolbarbutton class="toolbarbutton-1"
+                       id="rtticket-associate-toolbarbutton"
+                       label="&rtticket.associateCommand.label;"
+                       tooltiptext="&rtticket.associateCommand.tooltip;"
+                       observes="cmd_rtticket_associate"
+                       insertafter="button-forward"/>
+      </hbox>
+    </toolbar>
+  </toolbox>
+  <!-- endif -->
+
+</overlay>
